@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+# Conversion Library
 
-You can use the [editor on GitHub](https://github.com/the-binaryElf/The_8bit_Convertor/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### **Description**:
+This library is intended to facilitate the conversion of 
+any unsigned type to array of unit_8 and vice versa.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This library aims at converting big numbers to be transported via interfaces which can transmit data in only EIGHT bits i.e., a byte.
 
-### Markdown
+**Features:**  
+* Written in C, supports both C and CPP;
+* [Header-Only library.](https://en.wikipedia.org/wiki/Header-only)
+    (Just include the *Conversion.h* file and you are ready to go.)
+    
+**Example usage:**  
+    
+1.  A 4 byte wide data is packed in an array single byte 
+    with size FOUR. 
+    ```c++
+    uint32_t var32 {0xabcdef98};
+    uint8_t uint8_tArray[4];
+    IntoUint8_t(var32,
+                uint8_tArray);
+    ```
+2.  An array of uint8_t with size two is
+    reconstructed as 2 byte wide data.
+      ```c++
+      uint16_t new16bit{static_cast<uint16_t>(
+          Reconstruct(uint8_tArray))};
+      ``` 
+   Also check example.cpp and convertor.h file for more detailed usage explanation.  
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/the-binaryElf/The_8bit_Convertor/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+**Note:**
+ * Currently the project supports only __unsigned__ numbers.  
+ * Only upto **32 bit** (uint32_t) is supported so far.
