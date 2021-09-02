@@ -1,10 +1,7 @@
-# Conversion Library
-
-### **Description**:
-This library is intended to facilitate the conversion of 
-any unsigned type to array of unit_8 and vice versa.
-
-This library aims at converting big numbers to be transported via interfaces which can transmit data in only EIGHT bits i.e., a byte.
+### To clone the code:
+```
+https://github.com/the-binaryElf/The_8bit_Convertor.git
+```
 
 **Features:**  
 * Written in C, supports both C and CPP;
