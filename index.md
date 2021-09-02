@@ -1,4 +1,4 @@
-### To clone the code:
+### To clone the repo:
 ```
 https://github.com/the-binaryElf/The_8bit_Convertor.git
 ```
@@ -6,7 +6,7 @@ https://github.com/the-binaryElf/The_8bit_Convertor.git
 **Features:**  
 * Written in C, supports both C and CPP;
 * [Header-Only library.](https://en.wikipedia.org/wiki/Header-only)
-    (Just include the *Conversion.h* file and you are ready to go.)
+    (Just download include the *[Conversion.h](https://raw.githubusercontent.com/the-binaryElf/The_8bit_Convertor/main/Convertor.h)* file and you are ready to go.)
     
 **Example usage:**  
     
